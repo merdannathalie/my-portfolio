@@ -42,9 +42,7 @@ function Contact() {
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto p-4">
       <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
       <div className="mb-4">
-        <label className="block text-sm font-medium mb-1">
-          Name {FORMSPREE_FORM_URL}
-        </label>
+        <label className="block text-sm font-medium mb-1">Name</label>
         <input
           type="text"
           {...register("name", { required: "Name is required" })}
