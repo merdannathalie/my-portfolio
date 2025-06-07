@@ -1,16 +1,20 @@
 import "./App.css";
 import NavBar from "./components/Navbar.tsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Work from "./views/Work.tsx";
+import Contact from "./views/Contact.tsx";
+
 
 function App() {
   return (
-    <>
+    <Router>
       <NavBar />
-      <div className="max-w-5xl mx-auto p-4">
-        App
-        <br />
-        App
-      </div>
-    </>
+      <Routes>
+        <Route path="/about" element={<div>About Page</div>} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 

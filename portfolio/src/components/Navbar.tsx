@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 function NavBar() {
-  const toggleDropdown = (menuId: string) => {
-    const menu = document.getElementById(menuId);
-    if (menu) {
-      menu.classList.toggle("hidden");
-    }
-  };
+//   const toggleDropdown = (menuId: string) => {
+//     const menu = document.getElementById(menuId);
+//     if (menu) {
+//       menu.classList.toggle("hidden");
+//     }
+//   };
 
   return (
     <nav className="sticky top-0 z-50 bg-white w-full">
@@ -12,24 +14,15 @@ function NavBar() {
         <div className="text-xl font-bold text-blue-600">Nathalie Merdan</div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => toggleDropdown("menu1")}
-              className="flex items-center gap-1 hover:text-blue-500"
-            >
+             <Link to="/about" className="hover:text-blue-500">
               About
-            </button>
-            <button
-              onClick={() => toggleDropdown("menu1")}
-              className="flex items-center gap-1 hover:text-blue-500"
-            >
+            </Link>
+            <Link to="/work" className="hover:text-blue-500">
               Work
-            </button>
-            <button
-              onClick={() => toggleDropdown("menu1")}
-              className="flex items-center gap-1 hover:text-blue-500"
-            >
+            </Link>
+            <Link to="/contact" className="hover:text-blue-500">
               Contact
-            </button>
+            </Link>
           </div>
         </div>
       </div>
